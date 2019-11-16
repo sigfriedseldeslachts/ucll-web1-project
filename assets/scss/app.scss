@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: sans-serif;
+}
+
+@import "colors";
+
+// COMPONENTS
+@import "components/nav";
