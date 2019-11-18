@@ -16,21 +16,22 @@ img {
   max-width: 100%;
 }
 
-.text-right {
-  text-align: right;
-}
-
 header {
   background-color: #3f3d56;
 }
 header a.logo {
   display: block;
-  padding: 1.3em 0;
+  padding: 1.1em 0;
 }
 header a.logo img {
-  max-width: 10em;
+  max-width: 2em;
   margin: 0 auto;
   display: block;
+}
+@media screen and (min-width: 1024px) {
+  header a.logo {
+    padding-left: 1.1em;
+  }
 }
 header nav {
   width: 100%;
@@ -44,20 +45,51 @@ header nav ul {
 header nav ul li a {
   width: 100%;
   font-weight: 700;
-  color: #fff;
+  color: #e6e6e6;
   text-decoration: none;
-  padding: 1.3em 0;
+  padding: 1.1em 0;
   display: inline-block;
   transition: 0.4s ease-in-out all;
 }
-header nav ul li a:hover {
-  background-color: #292838;
+header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+@media screen and (min-width: 1024px) {
+  header nav ul {
+    text-align: right;
+  }
+  header nav ul li {
+    display: inline-block;
+  }
+  header nav ul li a {
+    padding: 1.1em;
+  }
+}
+header .header-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  header .header-container {
+    display: flex;
+    justify-content: end;
+  }
+  header .header-container a.logo img {
+    height: 100%;
+  }
+  header .header-container a.logo, header .header-container nav {
+    flex: 1 1 auto;
+  }
 }
 
 .card {
   border-radius: 0.24em;
   background-color: #fff;
   padding: 1em;
+}
+.card.jumbotron-overlap {
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -66,7 +98,7 @@ header nav ul li a:hover {
 }
 
 .container {
-  max-width: 1444px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
@@ -84,20 +116,43 @@ header nav ul li a:hover {
 .flex .flex-grow {
   flex-grow: 1;
 }
+.flex .flex-auto {
+  flex: 1 1 auto;
+}
+.flex.flex-col {
+  flex-direction: column;
+}
+.flex.align-center {
+  align-items: center;
+}
 
 .grid {
   display: grid;
 }
 
-.breadcrumb {
+.jumbotron {
   background-color: #3f3d56;
-  margin: -1em;
+  margin: 0 0 -1em 0;
   margin-bottom: -3em;
   padding-bottom: 5em;
-  color: #fff;
+  position: relative;
+  height: 50vh;
 }
-.breadcrumb img {
-  max-height: 30vh;
+.jumbotron .jumbotron-image {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .jumbotron .jumbotron-image {
+    display: block;
+  }
+  .jumbotron .jumbotron-image img {
+    max-height: 45vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    padding: 1em;
+  }
 }
 
 .button {
@@ -105,9 +160,48 @@ header nav ul li a:hover {
   display: inline-block;
   text-decoration: none;
   border-radius: 0.24em;
+  width: auto;
+  height: auto;
+  transition: 0.3s ease-in-out all;
 }
 .button.button-secondary {
   background-color: #38b2ac;
+}
+.button.button-secondary:hover {
+  background-color: #54c9c3;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/**
+ * COLORS
+ */
+.color-white {
+  color: #fff;
+}
+
+/**
+ * PADDING
+ */
+.pt-0 {
+  padding-top: 0;
+}
+
+/**
+ * MARGIN
+ */
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.h-full {
+  height: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

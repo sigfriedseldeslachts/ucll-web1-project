@@ -6,9 +6,13 @@ header {
         padding: $padding-nav 0;
 
         img {
-            max-width: 10em;
+            max-width: 2em;
             margin: 0 auto;
             display: block;
+        }
+
+        @media screen and (min-width: $lg) {
+            padding-left: $padding-nav;
         }
     }
 
@@ -25,17 +29,50 @@ header {
                 a {
                     width: 100%;
                     font-weight: 700;
-                    color: $white;
+                    color: darken($white, 10%);
                     text-decoration: none;
                     padding: $padding-nav 0;
                     display: inline-block;
                     transition: .4s ease-in-out all;
 
-                    &:hover {
-                        background-color: darken($primary-color, 10%);
+                    &:hover, &:active, &:focus {
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $lg) {
+                text-align: right;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        padding: $padding-nav;
                     }
                 }
             }
         }
+    }
+
+    .header-container {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $lg) {
+            display: flex;
+            justify-content: end;
+    
+            a.logo {
+                img {
+                    height: 100%;
+                }
+            }
+    
+            a.logo, nav {
+                flex: 1 1 auto;
+            }
+        }   
     }
 }

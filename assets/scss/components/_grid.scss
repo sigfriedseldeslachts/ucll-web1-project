@@ -8,6 +8,18 @@
     .flex-grow {
         flex-grow: 1;
     }
+
+    .flex-auto {
+        flex: 1 1 auto;
+    }
+
+    &.flex-col {
+        flex-direction: column;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
 }
 
 .grid {

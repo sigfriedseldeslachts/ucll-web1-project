@@ -1,8 +1,11 @@
 .card {
     border-radius: $radius;
     background-color: $white;
-
     padding: 1em;
+
+    &.jumbotron-overlap {
+        position: relative;
+    }
 
     @media screen and (min-width: $md) {
         box-shadow: $box-shadow;

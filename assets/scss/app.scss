@@ -19,10 +19,10 @@ img {
 }
 
 // COMPONENTS
-@import "components/helpers";
 @import "components/nav";
 @import "components/card";
 @import "components/container";
 @import "components/grid";
-@import "components/breadcrumb";
+@import "components/jumbotron";
 @import "components/button";
+@import "components/helpers";
