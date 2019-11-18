@@ -1,8 +1,8 @@
 .jumbotron {
     background-color: $primary-color;
     margin: 0 0 -1em 0;
-    margin-bottom: -3em;
-    padding-bottom: 5em;
+    //margin-bottom: -3em;
+    padding-bottom: 1em;
     position: relative;
     height: 50vh;
 
@@ -20,5 +20,24 @@
 
     @media screen and (max-width: $md) {
         padding: $padding;
+    }
+
+    @media screen and (min-width: $md) {
+        &:after {
+            content: "";
+            display: block;
+            height: 4em;
+            background-color: $primary-color;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            width: 110%;
+            margin-left: -5%;
+        }
+    }
+
+    @media screen and (min-width: $lg) {
+        &:after {
+            height: 5em;
+        }
     }
 }
