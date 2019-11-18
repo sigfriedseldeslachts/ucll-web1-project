@@ -1,0 +1,11 @@
+.breadcrumb {
+    background-color: $primary-color;
+    margin: -1em;
+    margin-bottom: -3em;
+    padding-bottom: 5em;
+    color: $white;
+
+    img {
+        max-height: 30vh;
+    }
+}

@@ -1,15 +1,28 @@
+@import "colors";
+
 * {
     box-sizing: border-box;
+    line-height: 150%;
+    color: $text-color;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: #eee;
+    background-color: $bg-color;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
-@import "colors";
+img {
+    max-width: 100%;
+}
 
 // COMPONENTS
+@import "components/helpers";
 @import "components/nav";
+@import "components/card";
+@import "components/container";
+@import "components/grid";
+@import "components/breadcrumb";
+@import "components/button";

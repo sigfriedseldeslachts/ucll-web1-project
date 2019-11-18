@@ -1,4 +1,8 @@
 .container {
-    max-width: 900px;
+    max-width: 1444px;
     margin: 0 auto;
+
+    @media screen and (min-width: $md) {
+        padding: 1em;
+    }
 }
