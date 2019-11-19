@@ -8,6 +8,7 @@
     transition: .3s ease-in-out all;
 
     &.button-secondary {
+        color: $text-color;
         background-color: $secondary-color;
 
         &:hover {

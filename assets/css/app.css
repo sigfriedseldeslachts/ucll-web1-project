@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   line-height: 150%;
-  color: #1a202c;
 }
 
 html, body {
@@ -10,6 +9,7 @@ html, body {
   background-color: #edf2f7;
   font-family: sans-serif;
   overflow-x: hidden;
+  color: #1a202c;
 }
 
 img {
@@ -42,18 +42,35 @@ header nav ul {
   margin: 0;
   text-align: center;
 }
+header nav ul li {
+  padding: 1.1em 0;
+}
 header nav ul li a {
   width: 100%;
   font-weight: 700;
   color: #e6e6e6;
   text-decoration: none;
-  padding: 1.1em 0;
   display: inline-block;
   transition: 0.4s ease-in-out all;
+  position: relative;
 }
-header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
-  color: #fff;
-  text-decoration: underline;
+header nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #e6e6e6;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+header nav ul li a:hover:before, header nav ul li a:active:before, header nav ul li a:focus:before, header nav ul li a.active:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 @media screen and (min-width: 1024px) {
   header nav ul {
@@ -61,8 +78,6 @@ header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
   }
   header nav ul li {
     display: inline-block;
-  }
-  header nav ul li a {
     padding: 1.1em;
   }
 }
@@ -81,6 +96,11 @@ header .header-container {
   header .header-container a.logo, header .header-container nav {
     flex: 1 1 auto;
   }
+}
+
+footer {
+  background-color: #3f3d56;
+  color: #fff;
 }
 
 .card {
@@ -128,6 +148,18 @@ header .header-container {
 
 .grid {
   display: grid;
+}
+
+/*
+ * Keep footer on the bottom of the page
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body main {
+  flex: 1;
 }
 
 .jumbotron {
@@ -181,6 +213,7 @@ header .header-container {
   transition: 0.3s ease-in-out all;
 }
 .button.button-secondary {
+  color: #1a202c;
   background-color: #38b2ac;
 }
 .button.button-secondary:hover {

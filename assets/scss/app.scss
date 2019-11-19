@@ -3,7 +3,6 @@
 * {
     box-sizing: border-box;
     line-height: 150%;
-    color: $text-color;
 }
 
 html, body {
@@ -12,6 +11,7 @@ html, body {
     background-color: $bg-color;
     font-family: sans-serif;
     overflow-x: hidden;
+    color: $text-color;
 }
 
 img {
@@ -20,6 +20,7 @@ img {
 
 // COMPONENTS
 @import "components/nav";
+@import "components/footer";
 @import "components/card";
 @import "components/container";
 @import "components/grid";

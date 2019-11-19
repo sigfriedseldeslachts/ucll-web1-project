@@ -26,18 +26,37 @@ header {
             text-align: center;
 
             li {
+                padding: $padding-nav 0;
+
                 a {
                     width: 100%;
                     font-weight: 700;
                     color: darken($white, 10%);
                     text-decoration: none;
-                    padding: $padding-nav 0;
                     display: inline-block;
                     transition: .4s ease-in-out all;
+                    position: relative;
 
-                    &:hover, &:active, &:focus {
-                        color: $white;
-                        text-decoration: underline;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: darken($white, 10%);
+                        visibility: hidden;
+                        -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+                        transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+                    }
+
+                    &:hover, &:active, &:focus, &.active {
+                        &:before {
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
                     }
                 }
             }
@@ -47,10 +66,7 @@ header {
 
                 li {
                     display: inline-block;
-
-                    a {
-                        padding: $padding-nav;
-                    }
+                    padding: $padding-nav;
                 }
             }
         }
