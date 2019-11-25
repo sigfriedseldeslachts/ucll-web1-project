@@ -1,10 +1,10 @@
 .jumbotron {
     background-color: $primary-color;
     margin: 0 0 -1em 0;
-    //margin-bottom: -3em;
     padding-bottom: 1em;
     position: relative;
     height: 50vh;
+    text-align: justify;
 
     .jumbotron-image {
         display: none;

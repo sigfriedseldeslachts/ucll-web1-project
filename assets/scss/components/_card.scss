@@ -5,9 +5,16 @@
 
     &.jumbotron-overlap {
         position: relative;
+        padding: 1em 3em;
     }
 
     @media screen and (min-width: $md) {
         box-shadow: $box-shadow;
+    }
+
+    @media screen and (max-width: $md) {
+        &.jumbotron-overlap {
+            padding: 1em;
+        }
     }
 }

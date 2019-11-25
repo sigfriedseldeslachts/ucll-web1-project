@@ -17,7 +17,7 @@ img {
 }
 
 header {
-  background-color: #3f3d56;
+  background-color: #343247;
 }
 header a.logo {
   display: block;
@@ -105,10 +105,16 @@ header .header-container {
 }
 .card.jumbotron-overlap {
   position: relative;
+  padding: 1em 3em;
 }
 @media screen and (min-width: 768px) {
   .card {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+@media screen and (max-width: 768px) {
+  .card.jumbotron-overlap {
+    padding: 1em;
   }
 }
 
