@@ -1,0 +1,24 @@
+.is-statistic {
+    background: rgb(56,178,172);
+    background: linear-gradient(135deg, rgba(56,178,172,1) 0%, rgba(44,142,137,1) 100%);
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        max-height: 2em;
+        fill: $white;
+        
+        box-sizing: content-box;
+        margin-right: ($padding/3)*2;
+    }
+
+    h2 {
+        small {
+            display: block;
+            font-size: 1rem;
+        }
+    }
+}

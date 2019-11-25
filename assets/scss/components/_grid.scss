@@ -24,6 +24,17 @@
 
 .grid {
     display: grid;
+
+    &.is-3 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: $padding;
+        gap: $padding;
+
+        @media (max-width: $md) {
+            grid-template-columns: repeat(1, 1fr);
+            border-radius: 0;
+        }
+    }
 }
 
 /*
