@@ -38,7 +38,16 @@
 .mt-1 {
     margin: 1em 0;
 }
+.mb-0 {
+    margin-bottom: 0;
+}
 
+/**
+ * Heights
+ */
 .h-full {
     height: 100%;
+}
+.h-15 {
+    height: 15vh;
 }

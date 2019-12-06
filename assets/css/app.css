@@ -16,6 +16,14 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: #38b2ac;
+  transition: 0.3s ease-in-out all;
+}
+a:hover {
+  color: #2c8b87;
+}
+
 header {
   background-color: #343247;
 }
@@ -180,6 +188,7 @@ body main {
   padding-bottom: 1em;
   position: relative;
   height: 50vh;
+  text-align: justify;
 }
 .jumbotron .jumbotron-image {
   display: none;
@@ -215,6 +224,47 @@ body main {
   }
 }
 
+.is-statistic {
+  background: #38b2ac;
+  background: linear-gradient(135deg, #38b2ac 0%, #2c8e89 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-statistic svg {
+  max-height: 2em;
+  fill: #fff;
+  box-sizing: content-box;
+  margin-right: 0.6666666667em;
+}
+.is-statistic h2 small {
+  display: block;
+  font-size: 1rem;
+}
+
+form {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+form .form-item {
+  margin-top: 1.5em;
+}
+form .form-item:first-child {
+  margin-top: 0;
+}
+form .form-item label, form .form-item input, form .form-item textarea {
+  display: block;
+  width: 100%;
+}
+form .form-item label {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+form .form-item textarea {
+  resize: vertical;
+}
+
 .button {
   padding: 0.6666666667em 1em;
   display: inline-block;
@@ -223,6 +273,7 @@ body main {
   width: auto;
   height: auto;
   transition: 0.3s ease-in-out all;
+  border: 0;
 }
 .button.button-secondary {
   color: #2d3748;
@@ -230,6 +281,11 @@ body main {
 }
 .button.button-secondary:hover {
   background-color: #54c9c3;
+}
+.button svg {
+  position: relative;
+  top: 2px;
+  max-height: 0.8rem;
 }
 
 .text-right {
@@ -276,27 +332,19 @@ body main {
   margin: 1em 0;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/**
+ * Heights
+ */
 .h-full {
   height: 100%;
 }
 
-.is-statistic {
-  background: #38b2ac;
-  background: linear-gradient(135deg, #38b2ac 0%, #2c8e89 100%);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.is-statistic svg {
-  max-height: 2em;
-  fill: #fff;
-  box-sizing: content-box;
-  margin-right: 0.6666666667em;
-}
-.is-statistic h2 small {
-  display: block;
-  font-size: 1rem;
+.h-15 {
+  height: 15vh;
 }
 
 /*# sourceMappingURL=app.css.map */

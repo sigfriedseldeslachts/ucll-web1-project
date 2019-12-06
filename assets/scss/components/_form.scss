@@ -1,0 +1,27 @@
+form {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+    .form-item {
+        margin-top: 1.5em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        label, input, textarea {
+            display: block;
+            width: 100%;
+        }
+
+        label {
+            font-weight: 700;
+            margin-bottom: $padding / 2;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+}

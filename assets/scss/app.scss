@@ -18,6 +18,15 @@ img {
     max-width: 100%;
 }
 
+a {
+    color: $secondary-color;
+    transition: .3s ease-in-out all;
+
+    &:hover {
+        color: darken($secondary-color, 10%);
+    }
+}
+
 // COMPONENTS
 @import "components/nav";
 @import "components/footer";
@@ -25,6 +34,7 @@ img {
 @import "components/container";
 @import "components/grid";
 @import "components/jumbotron";
+@import "components/statistics";
+@import "components/form";
 @import "components/button";
 @import "components/helpers";
-@import "components/statistics";

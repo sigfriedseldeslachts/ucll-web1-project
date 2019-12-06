@@ -6,6 +6,7 @@
     width: auto;
     height: auto;
     transition: .3s ease-in-out all;
+    border: 0;
 
     &.button-secondary {
         color: $text-color;
@@ -14,5 +15,11 @@
         &:hover {
             background-color: lighten($secondary-color, 10%);
         }
+    }
+
+    svg {
+        position: relative;
+        top: 2px;
+        max-height: .8rem;
     }
 }
