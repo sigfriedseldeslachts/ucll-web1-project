@@ -23,6 +23,9 @@ a {
 a:hover {
   color: #2c8b87;
 }
+a:focus {
+  border: 3px solid black;
+}
 
 header {
   background-color: #343247;
@@ -74,6 +77,10 @@ header nav ul li a:before {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus, header nav ul li a.active {
+  color: #e6e6e6;
+  border: 0;
 }
 header nav ul li a:hover:before, header nav ul li a:active:before, header nav ul li a:focus:before, header nav ul li a.active:before {
   visibility: visible;
@@ -257,6 +264,15 @@ form .form-item label, form .form-item input, form .form-item textarea {
   display: block;
   width: 100%;
 }
+form .form-item input, form .form-item textarea {
+  padding: 0.85em;
+  border: 0.12em solid #d1d1d1;
+  border-radius: 0.24em;
+  transition: 0.3s ease-in-out border-color;
+}
+form .form-item input:focus, form .form-item textarea:focus {
+  border-color: #3f3d56;
+}
 form .form-item label {
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -286,6 +302,9 @@ form .form-item textarea {
   position: relative;
   top: 2px;
   max-height: 0.8rem;
+}
+.button:focus {
+  border: 3px solid #3f3d56;
 }
 
 .text-right {

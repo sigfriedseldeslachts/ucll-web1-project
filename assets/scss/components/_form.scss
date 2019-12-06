@@ -2,7 +2,6 @@ form {
     grid-column-start: 1;
     grid-column-end: 3;
 
-
     .form-item {
         margin-top: 1.5em;
 
@@ -13,6 +12,18 @@ form {
         label, input, textarea {
             display: block;
             width: 100%;
+            
+        }
+
+        input, textarea {
+            padding: .85em;
+            border: .12em solid darken($white, 18%);
+            border-radius: $radius;
+            transition: .3s ease-in-out border-color;
+
+            &:focus {
+                border-color: $primary-color;
+            }
         }
 
         label {

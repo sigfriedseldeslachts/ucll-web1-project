@@ -52,6 +52,9 @@ header {
                     }
 
                     &:hover, &:active, &:focus, &.active {
+                        color: darken($white, 10%);
+                        border: 0;
+
                         &:before {
                             visibility: visible;
                             -webkit-transform: scaleX(1);

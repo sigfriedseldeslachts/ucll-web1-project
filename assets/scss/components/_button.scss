@@ -22,4 +22,8 @@
         top: 2px;
         max-height: .8rem;
     }
+
+    &:focus {
+        border: 3px solid $primary-color;
+    }
 }
