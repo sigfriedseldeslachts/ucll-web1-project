@@ -1,11 +1,11 @@
 .card {
     border-radius: $radius;
     background-color: $white;
-    padding: 1em;
+    padding: 2em 1em;
 
     &.jumbotron-overlap {
         position: relative;
-        padding: 1em 3em;
+        padding: 2em 3em;
     }
 
     @media screen and (min-width: $md) {
@@ -15,6 +15,16 @@
     @media screen and (max-width: $md) {
         &.jumbotron-overlap {
             padding: 1em;
+        }
+    }
+
+    p {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

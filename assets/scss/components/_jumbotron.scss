@@ -40,4 +40,10 @@
             height: 5em;
         }
     }
+
+    .button {
+        &:focus {
+            border-color: $white;
+        }
+    }
 }
