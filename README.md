@@ -1,3 +1,3 @@
-# echo-communication
+# UCLL Web 1 Website
 
-Repository voor opdracht web 1
+This was my project for the examination of UCLL Web 1.
